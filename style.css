@@ -3,8 +3,8 @@
 :root {
 	--bg: rgba(36, 37, 43, 0.85);
 	--clrPri: #1585a2;
-	/* --clrSec:
-	--clrAccent: */
+	/* --clrSec: */
+	--clrAccent: #741a32;
 	--wht: #ffffff;
 	--wht-mid: #e6e6e6;
 	--grey-lgr: #cccccc;
@@ -77,7 +77,7 @@ body:before {
 	box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.022),
 		0 8.7px 6.9px rgba(0, 0, 0, 0.031), 0 17.7px 14.2px rgba(0, 0, 0, 0.039),
 		0 36.5px 29.2px rgba(0, 0, 0, 0.048), 0 100px 80px rgba(0, 0, 0, 0.07);
-	/* border: 1px solid var(--wht); */
+	/* border: 0.1px solid var(--wht); */
 }
 
 .container header {
@@ -95,15 +95,16 @@ body:before {
 	height: 100%;
 	transform: translateY(-45px);
 	padding: 0.5em 2em;
-	background: rgba(206, 198, 198, 0.5);
-	-webkit-backdrop-filter: blur(50px);
-	backdrop-filter: blur(50px);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.6);
 	border-radius: 20px;
 }
 
 .container header nav .nav-logo {
 	font-size: 2.8rem;
 	font-weight: 800;
+	color: var(--clrAccent);
 }
 
 .container header nav ul li {
@@ -111,7 +112,16 @@ body:before {
 	padding: 0 1em;
 }
 .container header nav ul li a {
-	color: #000000;
+	color: var(--clrAccent);
+	font-weight: 600;
+}
+
+.container header nav ul li .active {
+	color: var(--clrAccent);
+	font-weight: 600;
+	background: var(--wht);
+	padding: 0.7rem 1.7rem;
+	border-radius: 20px;
 }
 
 .container header nav ul li:last-child {
@@ -119,7 +129,7 @@ body:before {
 }
 
 section .hero {
-	width: 600px;
+	width: 38rem;
 	height: auto;
 	position: absolute;
 	top: 20%;
